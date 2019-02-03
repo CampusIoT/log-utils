@@ -12,6 +12,12 @@ cd payload-codec
 tree src/main/javascript/
 ```
 
+## dec2geojson.js
+
+Ce script génère un document GeoJSON contenus les chemins parcourus par les objets géolocalisés.
+Ce script prend en entrée un fichier produit par decodePayload.js.
+Le document GeoJSON peut être visualisé et réédité avec http://geojson.io/
+
 ## filter.sh
 Ce script décode les valeurs des capteurs de plusieurs devices installés sur le campus de Grenoble.
 
