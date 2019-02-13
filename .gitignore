@@ -3,3 +3,4 @@
 *.dec
 *.dec.gz
 .geojson
+.DS_Store 
