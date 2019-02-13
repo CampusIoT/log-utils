@@ -38,3 +38,9 @@ Quand la charge utile contient plusieurs valeurs d'une mesure pris à des interv
 * Le deuxième champ est le timestamp au format ISO8601
 * Le troisième champ est l'identifiant du device dans l'application (le format est APPNAME/DEVEUI)
 * Le quatrième champ est le texte (au format JSON) de la valeur des capteurs du device à l'instant du timestamp.
+
+
+## TODOLIST
+* timeinterval.sh starttime
+* timeinterval.sh starttime endtime
+starttime et endtime peuvent être 1h, 1d, 1w, 1m 
