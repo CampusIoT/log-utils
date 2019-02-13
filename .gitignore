@@ -2,5 +2,5 @@
 *.log.gz
 *.dec
 *.dec.gz
-.geojson
-.DS_Store 
+*.geojson
+.DS_Store
