@@ -17,6 +17,13 @@ const stroke_width = 2;
 
 var filename = process.argv[2];
 
+var input;
+if(filename === "-") {
+  input = process.stdin;
+} else {
+  input = require('fs').createReadStream(filename);
+}
+
 // topic to path map
 var paths = {};
 
@@ -76,7 +83,7 @@ function processClose() {
 
 // =======================================
 var lineReader = require('readline').createInterface({
-  input: require('fs').createReadStream(filename)
+  input: input
 });
 
 lineReader.on('line', function (line) {

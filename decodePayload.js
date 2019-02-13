@@ -10,6 +10,14 @@ if(args.length !== 4) {
 }
 
 var filename = process.argv[2];
+
+var input;
+if(filename === "-") {
+  input = process.stdin;
+} else {
+  input = require('fs').createReadStream(filename);
+}
+
 var codec_path = process.argv[3];
 
 var decoder = require(codec_path).Decoder;
@@ -35,7 +43,7 @@ function processLine(timestamp,type,topic,msg){
       console.log(o.timestamp+","+d.toISOString()+","+applicationName+"/"+deveui+","+JSON.stringify(o.object));
     });
   } else {
-    var obj = decoder.decodeUp(fPort,payload);        
+    var obj = decoder.decodeUp(fPort,payload);
     var d =new Date(t);
     console.log(timestamp+","+d.toISOString()+","+applicationName+"/"+deveui+","+JSON.stringify(obj));
   }
@@ -46,7 +54,7 @@ function processClose() {
 
 // =======================================
 var lineReader = require('readline').createInterface({
-  input: require('fs').createReadStream(filename)
+  input: input
 });
 
 lineReader.on('line', function (line) {
