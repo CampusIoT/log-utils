@@ -2,3 +2,4 @@
 *.log.gz
 *.dec
 *.dec.gz
+.geojson
