@@ -1,6 +1,7 @@
 
 function usage(){
   console.log(process.argv[1]+" <filename> <codec_path>");
+  console.log(process.argv[1]+" - <codec_path> (for reading lines from stdin)");
 }
 
 const args = process.argv;

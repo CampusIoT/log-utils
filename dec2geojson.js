@@ -4,6 +4,9 @@
 
 function usage(){
   console.log(process.argv[1]+" <filename>");
+  console.log(process.argv[1]+" - (for reading lines from stdin)");
+));
+
 }
 
 const args = process.argv;
